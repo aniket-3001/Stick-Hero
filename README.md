@@ -3,12 +3,12 @@ This repository contains the source code for Stick Hero game (adaptation of the 
 
 AP Project (Section A) - Stick Hero Game
 
-Name - Aniket Gupta (shobhit22482@iiitd.ac.in)<br>
+Name - Aniket Gupta (aniket22073@iiitd.ac.in)
 Roll No. - 2022073
 
 Project Description ->
 Stick Hero is a Java-based game implemented using JavaFX library for the GUI. The game challenges players to extend a stick across platforms 
-to help a hero traverse the gaps. Players need to carefully time the stick extension to bridge the gap between platforms. The game 
+to help their hero traverse the gaps. Players need to carefully time the stick extension to bridge the gap between platforms. The game 
 incorporates various Object-Oriented Programming (OOP) principles, design patterns, multithreading and JUnit tests. The code is organized 
 into classes that encapsulate distinct entities and functionalities, fostering a clear and maintainable structure.
 
@@ -26,7 +26,7 @@ Controller, Manager, and Hero. By providing a shared set of data & methods, it e
 
 4. Relationships Between Classes: The program demonstrates the composition of objects, such as gameController holding pillars 
 object and hero which being used in various parts of the program. The Game Interface has an ArrayList of various Class' objects type 
-like GameHistory, Pillars, Scores,etc.
+like GameHistory, Pillars, Scores, etc.
 
 5. Encapsulation and Data Hiding: The code uses private instance variables at appropriate places and getter and setter methods to 
 encapsulate data and hide it from direct access.
