@@ -1,52 +1,30 @@
 # Stick-Hero
-This repository contains the source code for Stick Hero game (adaptation of the popular game with same name) implemented in Java with JavaFX libraries as part of the Advanced Programming course project. It also contains UML Class Diagrams, Use Case Diagrams & Screen Captures of the game.
-
-AP Project (Section A) - Stick Hero Game
-
-Name - Aniket Gupta (aniket22073@iiitd.ac.in)
-Roll No. - 2022073
+This repository contains the source code for Stick Hero game (adaptation of the popular Ketchapp game with same name) implemented in Java with JavaFX libraries as a part of my Advanced Programming course project. It also contains UML Class Diagrams, Use Case Diagrams and Screen Captures of the game.
 
 Project Description ->
-Stick Hero is a Java-based game implemented using JavaFX library for the GUI. The game challenges players to extend a stick across platforms 
-to help their hero traverse the gaps. Players need to carefully time the stick extension to bridge the gap between platforms. The game 
-incorporates various Object-Oriented Programming (OOP) principles, design patterns, multithreading and JUnit tests. The code is organized 
-into classes that encapsulate distinct entities and functionalities, fostering a clear and maintainable structure.
+Stick Hero is a Java game that uses JavaFX for its graphics. In the game, players guide a hero across pillars by placing sticks carefully. The game uses Object-Oriented Programming (OOP) principles, design patterns, multithreading, and JUnit tests. The code is organized into different classes, each handling specific tasks, making it easy to understand and maintain.
 
-Object-Oriented Principles Applied ->
+OOP Principles Applied ->
 
-1. Abstraction: Classes are designed to encapsulate related functionalities. For example, the GameController class encapsulates game
-management operations, and the Hero class encapsulates hero-related actions. The GameController class acts as a facade, providing a 
-simplified interface for game control operations, abstracting away the complexity of internal details.
+1. Abstraction: Classes are designed to encapsulate related functions. For example, the GameController class handles game management, and the Hero class handles hero actions. The GameController acts as a facade, providing a simple interface for game controls and hiding complex details.
 
-2. Inheritance: The game leverages inheritance, such as the Hero class extending the StickHero class. The Hero class is composed of 
-various items, demonstrating the Composite Design Pattern.
+2. The game uses inheritance, such as the Hero class extending the StickHero class. The Hero class includes various items, demonstrating the Composite Design Pattern.
 
-3. Interfaces - In my code, The "Game" interface serves as a common interface for different components of the game, such as 
-Controller, Manager, and Hero. By providing a shared set of data & methods, it enforces consistency in how these components are managed.
+3. Interfaces - The "Game" interface serves as a common interface for different game components like Controller, Manager, and Hero. It provides a shared set of data and methods, ensuring consistency in how these components are managed.
 
-4. Relationships Between Classes: The program demonstrates the composition of objects, such as gameController holding pillars 
-object and hero which being used in various parts of the program. The Game Interface has an ArrayList of various Class' objects type 
-like GameHistory, Pillars, Scores, etc.
+4. Relationships Between Classes: The program shows object composition, with gameController holding pillars objects and the hero, which are used in various parts of the program. The Game Interface has an ArrayList of objects like GameHistory, Pillars, and Scores.
 
-5. Encapsulation and Data Hiding: The code uses private instance variables at appropriate places and getter and setter methods to 
-encapsulate data and hide it from direct access.
-
-* The program follows all the good programming practices mentioned in the assignment document.
+5. Encapsulation: The code uses private instance variables and getter and setter methods to encapsulate data and prevent direct access.
 
 Design Patterns implemented -->
-1. Singleton Design Pattern
-The HighScoreComparator class utilizes the Singleton Design Pattern. It ensures that only one comparator object exists, saving memory by 
-preventing the creation of multiple comparator instances.
-2. Facade Design Pattern
-The GameController class implements the Facade Design Pattern by providing simplified methods for managing game state, handling user input, 
-and updating the view. External components interact with the GameController through high-level methods without needing to understand 
-internal details. The facade pattern simplifies the interface, making it more readable and user-friendly.
-3. Composite Design Pattern
-The Hero class demonstrates the Composite Design Pattern. It extends the StickHero class, which is a collection of various items, and contains 
-an object of its own type. The Hero class is composed of individual items, showcasing the composite structure.
-4. Factory Design Pattern
-The GameManager class implements the Factory Design Pattern. It encapsulates the creation logic for generating pillars and cherries, providing
-an easy extension for adding new game elements in the future.
+
+1. Singleton Design Pattern: The HighScoreComparator class uses the Singleton Design Pattern. It ensures that only one comparator object exists, saving memory by preventing the creation of multiple instances.
+
+2. Facade Design Pattern: The GameController class uses the Facade Design Pattern. It provides simplified methods for managing the game state, handling user input, and updating the view. External components interact with GameController through high-level methods without needing to understand the internal details. This pattern makes the interface simpler and more user-friendly.
+
+3. Composite Design Pattern: The Hero class demonstrates the Composite Design Pattern. It extends the StickHero class, which is a collection of various items, and contains an object of its own type. The Hero class is composed of individual items, showcasing the composite structure.
+
+4. Factory Design Pattern: The GameManager class uses the Factory Design Pattern. It encapsulates the creation logic for generating pillars and cherries, making it easy to add new game elements in the future.
 
 Implementation details of the classes -->
 
@@ -117,23 +95,17 @@ Features -->
 
 Assumptions/Points to keep in mind for the Project ->
 1. Note that valid input should be provided like when playing the game.
+
 2. The hero moves automatically after the stick length is set from pressing of mouse on the background (not on any element like pillar). 
 Avoid pressing the mouse button again during this movement to prevent unexpected behavior.
+
 3. If a cherry is present on the screen between the pillars, the hero can collect it while moving using "C". Cherries can be used
-for reviving. You are allowed to revive if you have atleast 3 cherries, which are deducted on revival.
+for reviving the hero. You are allowed to revive the hero if you have atleast 3 cherries, which are deducted on revival.
+
 4. Use the provided options to pause, restart, save and load games. Saved games can be selected from the list for 
 continuation. Only 5 games can be saved. Games saved before that are removed.
+
 5. Use the sound control options to mute or unmute the in-game sounds based on your preference.
-6. Strive to achieve a high score and compete against your own best scores and ENJOY!!!
 
-->Follow the steps outlined above to interact with the game application effectively. <br>
-->The UML diagram was made during mid-submission (deadline 1) of the project, so it may differ a little from the final source code.
-
-Conclusion ->
-This Stick Hero game demonstrates the effective use of OOP principles, including interfaces, inheritance, encapsulation & design patterns to 
-create a structured and maintainable codebase. It also has JUnit testing organized to ensure the correctness of critical game mechanisms.
-The game also incorporates multithreading approach that allows the JUnit tests to run concurrently with the main game, providing a way 
-to test the game's functionality independently and concurrently. It separates concerns into distinct classes, each responsible for 
-specific functionalities, resulting in a well-organized and easy-to-maintain system.
-
-📌 Important: Please make sure to follow the guidelines and policies outlined by the institution regarding the use of shared coursework materials. Use this repository responsibly and avoid any violations of academic integrity. Codes are provided for reference purposes only. It's recommended to understand the solutions and implement them independently.
+-> Follow the steps outlined above to interact with the game application effectively. <br>
+-> The UML diagram was made during mid-submission (deadline 1) of the project, so it may differ a little from the final source code.
